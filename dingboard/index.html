@@ -686,6 +686,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#video-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video references
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -763,7 +772,19 @@
 <li>The way to do it simply would be by taking advantage of the "Zero Gate Voltage Drain Current", but there's a load connected to the source so the voltage probably wont rise</li>
 <li>In-rush current, you need a resistor to the gate</li>
 <li>Going to need more robust circuitry than this</li>
+<li>Could flip the P channel enhancement mosfet to have the current go from source to drain in order to get the negative voltage, but too janky</li>
+<li>Going with a BQ2407x that handles power switching and battery charging. It's basically designed for this exact thing.</li>
 </ul>
+</li>
+</ul>
+<h3 id="video-references">Video references</h3>
+<p>Good videos:</p>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=YTGzncKU5RY">Altium Designer Quick-Start Tutorial with Phil Salmony from Phil's Lab</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=X00Cm5LMNQk">Raspberry Pi RP2040 Hardware Design | Altium Designer | JLCPCB - Phil's Lab #28</a></p>
 </li>
 </ul>
 
