@@ -704,6 +704,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-board-chip-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next board chip ideas
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -729,6 +738,7 @@
 
 <h1 id="dingboard">dingboard</h1>
 <p style="font-size: 20px;">Simple flight computer that uses all the best practices. A good place to start.</p>
+<p>This board is everything you would want in a passive data collection flight computer. Made for beginner model rockets. Basically a better version of <a href="https://zeul.ca/projects/archive/template.php?day=6&amp;month=6&amp;year=2022&amp;title=Calculating_the_Drag_Coefficient">this</a>.</p>
 <hr />
 <h3 id="initial-requirements-and-design-goals">Initial Requirements and Design Goals</h3>
 <p>The primary goal of dingboard is to enable my personal learning.
@@ -738,7 +748,7 @@ This will be the first board of many. The successor to dingboard will be a CAN e
 <li>Easy to operate and understand</li>
 <li>Fully open source</li>
 <li>Assemblable by JLCPCB PCBA</li>
-<li>On board charging and automatic power switching</li>
+<li>On board charging and automatic power switching using simple chip</li>
 <li>Charging status indicators</li>
 <li>MCU status indicator, sleep, data collection etc.</li>
 <li>Altium and solidworks integration</li>
@@ -746,8 +756,10 @@ This will be the first board of many. The successor to dingboard will be a CAN e
 <li>Components:<ul>
 <li>Barometer</li>
 <li>Accelerometer</li>
+<li>Thermistor for battery protection</li>
 </ul>
 </li>
+<li>Use entire safe range of battery (use a buck boost)</li>
 </ul>
 <p><a href="https://github.com/zeulewan/dingboard">Here's the link</a> to the Altium project repo</p>
 <h3 id="components-not-final">Components (not final)</h3>
@@ -768,13 +780,13 @@ This will be the first board of many. The successor to dingboard will be a CAN e
 <p>Power: </p>
 <ul>
 <li>
-<p><a href="https://old.reddit.com/r/18650masterrace/comments/qp21o8/buying_18650_batteries_start_here/">18650</a> <a href="https://www.reddit.com/r/18650masterrace/comments/1gqk8iy/recommendations_for_a_battery_charger/">charger</a></p>
+<p><a href="https://old.reddit.com/r/18650masterrace/comments/qp21o8/buying_18650_batteries_start_here/">18650</a> <a href="https://www.reddit.com/r/18650masterrace/comments/1gqk8iy/recommendations_for_a_battery_charger/">charger</a> <a href="https://cdn.shopify.com/s/files/1/0481/9678/0183/files/samsung_25r_data_sheet.pdf?v=1605015771">datasheet</a></p>
 </li>
 <li>
 <p>Charing and switching IC: <a href="https://www.ti.com/lit/ds/symlink/bq24074.pdf">BQ2407</a></p>
 </li>
 <li>
-<p><a href="https://cdn.sparkfun.com/datasheets/Prototyping/bq27441-g1.pdf">(i2c power indicator</a> for use in next board). <a href="https://www.sparkfun.com/products/13777">Sparkfun board for reference</a></p>
+<p>Thermistor: ?</p>
 </li>
 <li>
 <p>Regulator: <a href="https://www.lcsc.com/datasheet/lcsc_datasheet_2009192305_Richtek-Tech-RT9080-33GJ5_C841192.pdf">RT9080-33GJ5</a> for both battery 3.7v to 3.3 and USB 5v to 3.3</p>
@@ -805,6 +817,7 @@ This will be the first board of many. The successor to dingboard will be a CAN e
 <li>Going with a BQ2407x that handles power switching and battery charging. It's basically designed for this exact thing.</li>
 </ul>
 </li>
+<li>Not using RT9080. Need a buck boost. I should be able to use the entire range of battery</li>
 </ul>
 <h3 id="video-references">Video references</h3>
 <p>Good videos:</p>
@@ -814,6 +827,14 @@ This will be the first board of many. The successor to dingboard will be a CAN e
 </li>
 <li>
 <p><a href="https://www.youtube.com/watch?v=X00Cm5LMNQk">Raspberry Pi RP2040 Hardware Design | Altium Designer | JLCPCB - Phil's Lab #28</a></p>
+</li>
+</ul>
+<h3 id="next-board-chip-ideas">Next board chip ideas</h3>
+<ul>
+<li>Charging IC<ul>
+<li><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4162-L.pdf">Analog Devices LTC4162-L</a></li>
+<li><a href="https://cdn.sparkfun.com/datasheets/Prototyping/bq27441-g1.pdf">(i2c power indicator</a>, <a href="https://www.sparkfun.com/products/13777">Sparkfun board for reference</a></li>
+</ul>
 </li>
 </ul>
 
