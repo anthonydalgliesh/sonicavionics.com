@@ -749,18 +749,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#components-not-final" class="md-nav__link">
+  <a href="#components" class="md-nav__link">
     <span class="md-ellipsis">
-      Components (not final)
+      Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compute
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#checklist" class="md-nav__link">
+  <a href="#checklist-not-really-relevant-anymore" class="md-nav__link">
     <span class="md-ellipsis">
-      Checklist
+      Checklist (Not really relevant anymore)
     </span>
   </a>
   
@@ -833,22 +857,8 @@ This will be the first board of many. The successor to dingboard will be a CAN e
 <li>Use entire safe range of battery (use a buck boost)</li>
 </ul>
 <p><a href="https://github.com/zeulewan/dingboard">Here's the link</a> to the Altium project repo</p>
-<h3 id="components-not-final">Components (not final)</h3>
-<ul>
-<li>
-<p>MCU: RP 2040, <a href="https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf">Hardware design guide</a>, <a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">datasheet</a></p>
-</li>
-<li>
-<p>IMU: <a href="https://datasheet.octopart.com/ICM-42670-P-InvenSense-datasheet-155317655.pdf?src-supplier=Component+Distributors+Inc.">ICM-42670</a></p>
-</li>
-<li>
-<p>Barometer: <a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/SGST/SGST-S-A0007383744/SGST-S-A0007383744-1.pdf?src-supplier=IHS+Markit">LPS22HH</a></p>
-</li>
-<li>
-<p>Flash: <a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/WBND/WBND-S-A0008390754/WBND-S-A0008390754-1.pdf?src-supplier=IHS+Markit">W25Q128JV</a></p>
-</li>
-<li>
-<p>Power: </p>
+<h3 id="components">Components</h3>
+<h4 id="power">Power</h4>
 <ul>
 <li>
 <p><a href="https://old.reddit.com/r/18650masterrace/comments/qp21o8/buying_18650_batteries_start_here/">18650</a> <a href="https://www.reddit.com/r/18650masterrace/comments/1gqk8iy/recommendations_for_a_battery_charger/">charger</a> <a href="https://cdn.shopify.com/s/files/1/0481/9678/0183/files/samsung_25r_data_sheet.pdf?v=1605015771">datasheet</a></p>
@@ -871,12 +881,25 @@ or this Buck-boost: <a href="https://www.ti.com/lit/ds/symlink/tps63070.pdf?ts=1
 <a href="https://www.sparkfun.com/datasheets/Prototyping/tps61200.pdf">or this</a></p>
 </li>
 </ul>
+<h4 id="compute">Compute</h4>
+<ul>
+<li>
+<p>MCU: RP 2040, <a href="https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf">Hardware design guide</a>, <a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">datasheet</a></p>
+</li>
+<li>
+<p>IMU: <a href="https://datasheet.octopart.com/ICM-42670-P-InvenSense-datasheet-155317655.pdf?src-supplier=Component+Distributors+Inc.">ICM-42670</a></p>
+</li>
+<li>
+<p>Barometer: <a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/SGST/SGST-S-A0007383744/SGST-S-A0007383744-1.pdf?src-supplier=IHS+Markit">LPS22HH</a></p>
+</li>
+<li>
+<p>Flash: <a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/WBND/WBND-S-A0008390754/WBND-S-A0008390754-1.pdf?src-supplier=IHS+Markit">W25Q128JV</a></p>
 </li>
 <li>
 <p>LED: Power status indicator</p>
 </li>
 </ul>
-<h3 id="checklist">Checklist</h3>
+<h3 id="checklist-not-really-relevant-anymore">Checklist (Not really relevant anymore)</h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Altium with GitHub</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Begin PCB V1</li>
@@ -930,7 +953,7 @@ or this Buck-boost: <a href="https://www.ti.com/lit/ds/symlink/tps63070.pdf?ts=1
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 20, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 21, 2024</span>
   </span>
 
     
