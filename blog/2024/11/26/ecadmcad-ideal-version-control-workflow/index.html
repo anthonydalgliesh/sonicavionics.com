@@ -12,13 +12,13 @@
         <meta name="author" content="Zeul">
       
       
-        <link rel="canonical" href="https://zeuldocs.com/blog/2024/11/16/nov-16th/">
+        <link rel="canonical" href="https://zeuldocs.com/blog/2024/11/26/ecadmcad-ideal-version-control-workflow/">
       
       
-        <link rel="prev" href="../../15/init/">
+        <link rel="prev" href="../../25/altium-complaints/">
       
       
-        <link rel="next" href="../../17/nov-17th/">
+        <link rel="next" href="../nov-26th/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -29,7 +29,7 @@
     
     
       
-        <title>Nov 16th - zeuldocs</title>
+        <title>ECAD/MCAD Ideal Version Control Workflow - zeuldocs</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nov 16th
+              ECAD/MCAD Ideal Version Control Workflow
             
           </span>
         </div>
@@ -865,7 +865,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-11-16 00:00:00+00:00" class="md-ellipsis">November 16, 2024</time>
+                        <time datetime="2024-11-26 00:00:00+00:00" class="md-ellipsis">November 26, 2024</time>
                       </div>
                     </li>
                     
@@ -877,7 +877,7 @@
                             in
                             
                               <a href="../../../../category/dingboard/">dingboard</a>, 
-                              <a href="../../../../category/agenda/">agenda</a></span>
+                              <a href="../../../../category/complaints/">complaints</a></span>
                         </div>
                       </li>
                     
@@ -888,7 +888,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -908,7 +908,7 @@
         
 
   
-    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/blog/posts/2024/november/16.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/blog/posts/2024/november/ecad_and_mcad.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -916,14 +916,20 @@
   
 
 
-  <h1>Nov 16th</h1>
+  <h1>ECAD/MCAD Ideal Version Control Workflow</h1>
 
-<p>Agenda for today:</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Altium with GitHub</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Altium with Solidworks</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Begin dingboard</li>
-</ul>
+<p>Here's some ideas for how Solidworks and Altium or any MCAD and ECAD would ideally work together. </p>
+<p>Altium codesigner is for use with Altium 365 only. 
+Solidworks doesn't have branching and merging. It's proprietary version control method is rubbish.</p>
+<p>Ideally, you'd have a MCAD and a ECAD repo. Both of them use each other as submodules. Or you could just have the one repo with RBAC but I don't think github lets you do that because it would be annoying if you commit to a file you don't have perms for then try to push it it would say nope bruh you can't change that one file in all your files you changed. Actually that doesn't sound so bad </p>
+<p>MCAD pulls to the ECAD submodule. Changes are made to the PCB, a pull request is made, the electrical engineer accepts them. Then the rest of the MCAD team pulls from the ECAD repo and has access to the new changes. There should be some features like board shape, and max component height that the MCAD engineer has control of that a pull request is required to make. That would be what the submodule </p>
+<p>Maybe there would just be a third repo for things that both teams depend on. This would only be the board dimensions. Both the ECAD and MCAD softwares should be able to edit it, but there should be accept/deny system where an engineer from both teams need to approve the change. 
+The ECAD team doesn't want to see the rest of the structure they only care about the PCB.</p>
+<p>Sometimes you'd want the MCAD team designing an enclosure as a secondary to the PCB layout, sometimes there's board constraints sizes like in a rocket which makes the MCAD designers primary. 
+Three sort of use cases: Primary MCAD, primary ECAD, and equal priority</p>
+<p>There would need to be a system for breaking changes. There needs to be keep out regions, and expected layouts. </p>
+<p>I would like for right now, to be able to push a board layout, a rough layout, to the board dimensions/connectors repo. This contains the gold fingers, USB and JST connectors. This is an initial push so it doesn't require both team's approval. Next I want to go into solidworks, move around the gold fingers, change the board diameter, lets say shrink it. Then I push to the dimensions/connectors repo. A pop up on Altium appears, it says "a change has been proposed". Then it says would you like to branch to check approvability? I finish my changes to the ECAD before I then branch the ECAD repo. This special branch pulls changes proposals from the dimensions/connectors repo. Then I look around to see if I can rework the PCB a bit to allow the changes. I rework the pcb a bit then accept the changes. I merge back the ECAD branch to main. The new main has a different git hash has associated with the dimensions/connectors submodule. </p>
+<p>Anyways there's some spit balling about an ideal version control ECAD/MCAD workflow. I don't think this can be done with kicad or some open source cad software. The two softwares would need to agree on a system for the dimensions/connectors files. And it's probably best the two softwares are kept separate. </p>
 
 
 
@@ -956,7 +962,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2024</span>
   </span>
 
     
