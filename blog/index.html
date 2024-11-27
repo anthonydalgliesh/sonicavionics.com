@@ -864,12 +864,15 @@
   <div class="md-post__content md-typeset">
     <h2 id="nov-26th"><a class="toclink" href="2024/11/26/nov-26th/">Nov 26th</a></h2>
 <p>Agenda:</p>
-<ul>
-<li>solid works and altium</li>
-<li>get proper PCIe dimensions</li>
-<li>add power switch for battery</li>
-<li>finish routing</li>
-<li>add all LCSC designators</li>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> solid works and altium<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> set board dimensions</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> get proper PCIe dimensions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> add power switch for battery</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> finish routing</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> add all LCSC designators</li>
 </ul>
 <p>This is not going to be a CAN enabled board. The gold fingers are for practice, and modularity. The only reason it's not the next board already is because I choose 1S for the battery for simplicity. Might have been better to just make the full board from the get go. but since I'll have to go to 3S I should just to the CAN stuff when I do that.</p>
 <p>if time:</p>
@@ -974,6 +977,10 @@ Three sort of use cases: Primary MCAD, primary ECAD, and equal priority</p>
 Why are they even trying to keep circuit maker alive? It's fully broken because it wants you to sign in with a name and password but you can only use google to sign up in the browser and there's no option to change your password anywhere. </p>
 <p>There used to be a <a href="https://techdocs.altium.com/display/ALIVE/AltiumLive+-+Content+Store">template libary?</a>. Now all the "design content" links redirect to octopart which doesn't seem to have templates like the design content. <a href="https://designcontent.live.altium.com/#Search/pcie">https://designcontent.live.altium.com/#Search/pcie</a></p>
 <p>The license manager has to be one of the most annoying things known to man. Every now and then you start up Altium and you have to click "release" then roam on three licenses because it thinks you're signed in somewhere else.</p>
+<p>Altium, Solidworks and Onshape have different methods of rotation. </p>
+<p>Onshape is clearly the best, pan zoom and rotate are all done without a modifier. It's just constrained rotate which uses shift. I don't think solidworks even has that though.</p>
+<p>Altium is the worst is uses track ball rotation which inherently requires more clicks.</p>
+<p><a href="https://www.mattkeeter.com/projects/rotation/">Matt Keeter // 3D Rotation Design</a></p>
     
   </div>
 </article>
