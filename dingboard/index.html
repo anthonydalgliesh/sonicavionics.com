@@ -839,9 +839,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#checklist-not-really-relevant-anymore" class="md-nav__link">
+  <a href="#checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      Checklist (Not really relevant anymore)
+      Checklist
     </span>
   </a>
   
@@ -920,19 +920,29 @@ This will be the first board of many. The successor to dingboard will be a CAN e
 <li>Why not go with an ESP?</li>
 </ul>
 <p><a href="https://github.com/zeulewan/dingboard">Here's the link</a> to the Altium project repo</p>
-<h2 id="checklist-not-really-relevant-anymore">Checklist (Not really relevant anymore)</h2>
+<h2 id="checklist">Checklist</h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Altium with GitHub</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Begin PCB V1</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Complete board schematic</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Complete board layout</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Altium with Solidworks</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> JLCPCB PCBA</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Complete board schematic</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> solid works and altium<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <del>set board dimensions</del> Gonna set the board dimensions after I get the first iteration of the power board ordered</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> get proper PCIe dimensions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <del>add power switch for battery</del> Forget it i'll just unplug it for this version</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> finish routing<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> buck boost</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> fuel gauge </li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> add test points</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> add all LCSC designators</li>
 </ul>
 <h2 id="library">Library</h2>
-<p>I started using the <a href="https://altiumlibrary.com/">Celestial Altium Library</a></p>
-<p><a href="https://www.youtube.com/watch?v=lBvwvbw83iY">Install vid</a></p>
-<p>finally found a <a href="https://www.snapeda.com/parts/PCIE-036-02-S-D-EMS3/Samtec%20Inc./view-part/">PCIe x1 footprint</a> </p>
+<p>I started using the <a href="https://altiumlibrary.com/">Celestial Altium Library</a>.
+<a href="https://www.youtube.com/watch?v=lBvwvbw83iY">Install video</a></p>
+<p>I finally found a <a href="https://www.snapeda.com/parts/PCIE-036-02-S-D-EMS3/Samtec%20Inc./view-part/">PCIe x1 footprint</a>. edit: should have just made it from scratch. That footprint was garbage, had to redo it.</p>
 <h2 id="video-references">Video references</h2>
 <p>Good videos:</p>
 <ul>
@@ -947,6 +957,12 @@ This will be the first board of many. The successor to dingboard will be a CAN e
 </li>
 <li>
 <p><a href="https://www.youtube.com/watch?v=t67KcQHhIC4&amp;list=PL3aaAq2OJU5EsYtNwTPHNO3RHNJN34FbO&amp;index=16">Microcontroller-Based Hardware Design With Altium Designer - #3 USB C </a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=ciPQ3UqYVuc">ECAD-MCAD CoDesign with Altium 365 &amp; SOLIDWORKS</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=19WnYPhNOH0">Types of PCB Grounding Explained | PCB Layout</a></p>
 </li>
 </ul>
 
