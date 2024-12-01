@@ -65,10 +65,6 @@
          <lastmod>2024-12-01</lastmod>
     </url>
     <url>
-         <loc>https://zeuldocs.com/dingboard/Power/</loc>
-         <lastmod>2024-12-01</lastmod>
-    </url>
-    <url>
          <loc>https://zeuldocs.com/dingboard/Sensors/</loc>
          <lastmod>2024-12-01</lastmod>
     </url>
@@ -78,6 +74,14 @@
     </url>
     <url>
          <loc>https://zeuldocs.com/dingboard/misc-thoughts/</loc>
+         <lastmod>2024-12-01</lastmod>
+    </url>
+    <url>
+         <loc>https://zeuldocs.com/dingboard/power/0.0.1/</loc>
+         <lastmod>2024-12-01</lastmod>
+    </url>
+    <url>
+         <loc>https://zeuldocs.com/dingboard/power/0.1.0/</loc>
          <lastmod>2024-12-01</lastmod>
     </url>
     <url>
