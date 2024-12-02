@@ -9,10 +9,6 @@
          <lastmod>2024-12-02</lastmod>
     </url>
     <url>
-         <loc>https://zeuldocs.com/avionics/Sensors/</loc>
-         <lastmod>2024-12-02</lastmod>
-    </url>
-    <url>
          <loc>https://zeuldocs.com/avionics/cots/</loc>
          <lastmod>2024-12-02</lastmod>
     </url>
@@ -21,11 +17,15 @@
          <lastmod>2024-12-02</lastmod>
     </url>
     <url>
-         <loc>https://zeuldocs.com/avionics/power/0.0.1/</loc>
+         <loc>https://zeuldocs.com/avionics/modules/power/0.0.1/</loc>
          <lastmod>2024-12-02</lastmod>
     </url>
     <url>
-         <loc>https://zeuldocs.com/avionics/power/0.1.0/</loc>
+         <loc>https://zeuldocs.com/avionics/modules/power/0.1.0/</loc>
+         <lastmod>2024-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://zeuldocs.com/avionics/modules/sensors/</loc>
          <lastmod>2024-12-02</lastmod>
     </url>
     <url>
