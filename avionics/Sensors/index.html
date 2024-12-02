@@ -12,13 +12,13 @@
         <meta name="author" content="Zeul">
       
       
-        <link rel="canonical" href="https://zeuldocs.com/Avionics/misc-thoughts/">
+        <link rel="canonical" href="https://zeuldocs.com/avionics/Sensors/">
       
       
-        <link rel="prev" href="../cots/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../power/0.0.1/">
+        <link rel="next" href="../cots/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -29,7 +29,7 @@
     
     
       
-        <title>Misc thoughts - zeuldocs</title>
+        <title>Sensor Module - zeuldocs</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#misc-thoughts" class="md-skip">
+        <a href="#sensor-module" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Misc thoughts
+              Sensor Module
             
           </span>
         </div>
@@ -433,10 +433,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Sensors/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -445,6 +454,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -475,28 +485,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Misc thoughts
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../misc-thoughts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,33 +497,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#misc-thoughts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Misc Thoughts
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -952,23 +917,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#misc-thoughts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Misc Thoughts
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -983,7 +933,7 @@
                   
 
   
-    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/Avionics/misc-thoughts.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/avionics/Sensors.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -991,58 +941,25 @@
   
 
 
-  <h1>Misc thoughts</h1>
-
-<h2 id="misc-thoughts">Misc Thoughts</h2>
+<h1 id="sensor-module">Sensor Module</h1>
 <ul>
-<li>Using a single MOSFET for switching between USB and battery voltage is just too janky.<ul>
-<li>Shoot through voltage.</li>
-<li>The way to do it simply would be by taking advantage of the "Zero Gate Voltage Drain Current", but there's a load connected to the source so the voltage probably wont rise</li>
-<li>In-rush current, you need a resistor to the gate</li>
-<li>Going to need more robust circuitry than this</li>
-<li>Could flip the P channel enhancement mosfet to have the current go from source to drain in order to get the negative voltage, but too janky</li>
-<li>Going with a BQ2407x that handles power switching and battery charging. It's basically designed for this exact thing.</li>
-</ul>
+<li>
+<p>MCU: RP 2040, <a href="https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf">Hardware design guide</a>, <a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">datasheet</a></p>
 </li>
 <li>
-<p>Not using RT9080. Need a buck boost. I should be able to use the entire range of battery</p>
+<p>IMU: <a href="https://datasheet.octopart.com/ICM-42670-P-InvenSense-datasheet-155317655.pdf?src-supplier=Component+Distributors+Inc.">ICM-42670</a></p>
 </li>
 <li>
-<p>Typical via sizes</p>
-<ul>
-<li>Large: 0.7 mm pad, 0.3 mm drill</li>
-<li>Medium: 0.6 mm pad, 0.25 mm drill</li>
-<li>Small: 0.5 mm pad, 0.2 mm</li>
-</ul>
+<p>Barometer: <a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/SGST/SGST-S-A0007383744/SGST-S-A0007383744-1.pdf?src-supplier=IHS+Markit">LPS22HH</a></p>
 </li>
 <li>
-<p>Make it hole: 0.3 and diameter: 0.4 for no extra charge</p>
+<p>Flash: <a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/WBND/WBND-S-A0008390754/WBND-S-A0008390754-1.pdf?src-supplier=IHS+Markit">W25Q128JV</a></p>
 </li>
 <li>
-<p>Vias under pads cost more and cause issues with assembly sometimes. Not worth it.</p>
+<p>LED: Power status indicator</p>
 </li>
 <li>
-<p>OshPark doesn't do assembly</p>
-</li>
-<li>
-<p>I really am gonna have to choose between using github or the ECAD/MCAD plug in. I think the answer is obvious. Altium 365 is not the way. KiCAD is worth considering switching to. More accessible, free, apparently less professional though. What would a start up use though? Probably KiCAD. I don't know how well it handles multi board projects. I don't even know how Altium handles it though. Should I switch to KiCAD for Dongboard? Queens, and waterloo uses it. It probably has much better git integration although I'd have to look into that. ALtium 365 actually does provide some benefits. You can view stuff in the browser. There's also flux.ai which may or may not be scamming. Solidworks is such a drag but I don't think OnShape is ready. I've had it slow down on me too many times... meh not that many times though. No good FOSS CAD software. </p>
-</li>
-<li>
-<p>Always go on texas instruments' website to check if there is a newer version of the chip</p>
-</li>
-<li>
-<p>Better to use "point of load" regulation </p>
-</li>
-<li>
-<p>Will have a multiplexer and on each compute board.</p>
-</li>
-<li>3.3v rail, 5v rail, and unregulated 12v rail</li>
-<li>dingboard just has one regulated 3.3v rail</li>
-<li>
-<p>dongboard will have barrel jack on the power board for fast charging with a charging IC, it will also have a rp2040 and a voltage monitoring chip. The UCB-C port won't even have its power terminals connected. It will be just for programming. the barrel or QD will be for charging/power supply while the rocket is on the pad. The CAN bus will also have a QD on it.</p>
-</li>
-<li>
-<p>When I start the MCU I'm gonna say eff Altium 365 and just download everything and re initialize my repo. I'm actually going to make a release for the 0.0.1 power board it will have schematics pictures and the BOM. It's important to keep things open source. It's so easy for things to turn into slop otherwise.</p>
+<p>GPS <a href="https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf">blox m10q</a></p>
 </li>
 </ul>
 
@@ -1077,7 +994,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 27, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2024</span>
   </span>
 
     

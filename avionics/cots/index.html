@@ -12,13 +12,13 @@
         <meta name="author" content="Zeul">
       
       
-        <link rel="canonical" href="https://zeuldocs.com/Avionics/Sensors/">
+        <link rel="canonical" href="https://zeuldocs.com/avionics/cots/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../Sensors/">
       
       
-        <link rel="next" href="../cots/">
+        <link rel="next" href="../misc-thoughts/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -29,7 +29,7 @@
     
     
       
-        <title>Sensor Module - zeuldocs</title>
+        <title>Cots Stuff - zeuldocs</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sensor-module" class="md-skip">
+        <a href="#cots-stuff" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sensor Module
+              Cots Stuff
             
           </span>
         </div>
@@ -433,6 +433,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sensors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensor Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -445,29 +466,18 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   <span class="md-ellipsis">
-    Sensor Module
+    Cots Stuff
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cots/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -476,6 +486,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cots-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      COTS Components
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -920,6 +959,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cots-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      COTS Components
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -933,7 +989,7 @@
                   
 
   
-    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/Avionics/Sensors.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/avionics/cots.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -941,26 +997,13 @@
   
 
 
-<h1 id="sensor-module">Sensor Module</h1>
+<h1 id="cots-stuff">Cots Stuff</h1>
+<p>The flight computer needs to have redundant consumer off the shelf altitude measurement. Not sure if the COTS GPS is required or suggested.</p>
+<h3 id="cots-components">COTS Components</h3>
+<p>GPS</p>
 <ul>
-<li>
-<p>MCU: RP 2040, <a href="https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf">Hardware design guide</a>, <a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">datasheet</a></p>
-</li>
-<li>
-<p>IMU: <a href="https://datasheet.octopart.com/ICM-42670-P-InvenSense-datasheet-155317655.pdf?src-supplier=Component+Distributors+Inc.">ICM-42670</a></p>
-</li>
-<li>
-<p>Barometer: <a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/SGST/SGST-S-A0007383744/SGST-S-A0007383744-1.pdf?src-supplier=IHS+Markit">LPS22HH</a></p>
-</li>
-<li>
-<p>Flash: <a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/WBND/WBND-S-A0008390754/WBND-S-A0008390754-1.pdf?src-supplier=IHS+Markit">W25Q128JV</a></p>
-</li>
-<li>
-<p>LED: Power status indicator</p>
-</li>
-<li>
-<p>GPS <a href="https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_DataSheet_UBX-22013293.pdf">blox m10q</a></p>
-</li>
+<li>Featherweight 915 MHz</li>
+<li>BigRedBee COTS GPS</li>
 </ul>
 
 
