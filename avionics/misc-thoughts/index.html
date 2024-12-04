@@ -18,7 +18,7 @@
         <link rel="prev" href="../cots/">
       
       
-        <link rel="next" href="../modules/power/0.0.2/">
+        <link rel="next" href="../modules/backplate/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -552,6 +552,8 @@
       
         
       
+        
+      
     
     
       
@@ -598,7 +600,7 @@
     
       
         
-      
+          
         
       
     
@@ -616,7 +618,66 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_5_1" id="__nav_2_5_1_label" tabindex="0">
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../modules/backplate/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Backplate
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Backplate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -627,8 +688,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
             <span class="md-nav__icon md-icon"></span>
             Power
           </label>
@@ -709,7 +770,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
         
           
           
@@ -726,8 +787,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_3">
             <span class="md-nav__icon md-icon"></span>
             Recovery
           </label>
@@ -768,7 +829,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_4" >
         
           
           
@@ -785,8 +846,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_4">
             <span class="md-nav__icon md-icon"></span>
             Sensors
           </label>
@@ -1169,26 +1230,22 @@
 
 <h2 id="misc-thoughts">Misc Thoughts</h2>
 <ul>
-<li>Using a single MOSFET for switching between USB and battery voltage is just too janky.<ul>
+<li>Using a single MOSFET for switching between USB and battery voltage is just too janky.</li>
 <li>Shoot through voltage.</li>
 <li>The way to do it simply would be by taking advantage of the "Zero Gate Voltage Drain Current", but there's a load connected to the source so the voltage probably wont rise</li>
 <li>In-rush current, you need a resistor to the gate</li>
 <li>Going to need more robust circuitry than this</li>
 <li>Could flip the P channel enhancement mosfet to have the current go from source to drain in order to get the negative voltage, but too janky</li>
 <li>Going with a BQ2407x that handles power switching and battery charging. It's basically designed for this exact thing.</li>
-</ul>
-</li>
 <li>
 <p>Not using RT9080. Need a buck boost. I should be able to use the entire range of battery</p>
 </li>
 <li>
 <p>Typical via sizes</p>
-<ul>
+</li>
 <li>Large: 0.7 mm pad, 0.3 mm drill</li>
 <li>Medium: 0.6 mm pad, 0.25 mm drill</li>
 <li>Small: 0.5 mm pad, 0.2 mm</li>
-</ul>
-</li>
 <li>
 <p>Make it hole: 0.3 and diameter: 0.4 for no extra charge</p>
 </li>
@@ -1205,7 +1262,7 @@
 <p>Always go on texas instruments' website to check if there is a newer version of the chip</p>
 </li>
 <li>
-<p>Better to use "point of load" regulation </p>
+<p>Better to use "point of load" regulation</p>
 </li>
 <li>
 <p>Will have a multiplexer and on each compute board.</p>
@@ -1220,12 +1277,10 @@
 </li>
 <li>
 <p>Outboard physical connections</p>
-<ul>
-<li>remove before flight banana pins</li>
-<li>power/charging </li>
-<li>for solid: ignition </li>
-</ul>
 </li>
+<li>remove before flight banana pins</li>
+<li>power/charging</li>
+<li>for solid: ignition</li>
 </ul>
 
 
@@ -1249,7 +1304,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 4, 2024</span>
   </span>
 
     
