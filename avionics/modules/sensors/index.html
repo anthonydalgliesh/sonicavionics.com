@@ -1161,16 +1161,6 @@
 Using it in Automatic Switchover with Priority (XCOMP) mode with the battery as the main and USB as secondary  </p>
 </li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>10.7 Hotplugging with TPS212x
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Some applications require power muxing between hotplugged inputs, such as USB applications or systems with
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>secondary supplies coming from a long cable. During a hot plug event, the inherent inductance in the cable and
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>input traces can cause a voltage spike on the input pin (V = LCABLE * dI / dT). This can cause a voltage spike on
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>the input of the TPS212x that could potentially exceed the absolute maximum rating.
-</span></code></pre></div>
-<ul>
-<li>TVS (Transient Voltage Spike) protection diode <a href="https://www.ti.com/lit/ds/symlink/tvs1800.pdf?ts=1733946180781&amp;ref_url=https%253A%252F%252Fwww.google.com%252F">TVS1800</a> This will let us use any length USB cable. I don't think we need one on the battery side. The traces after the battery connection point don't matter, and the battery cable will be fairly short. TVS is around 5us. I'm not gonna put a USB protection IC on this board, but the power board will definitely have one.
-Actually we don't need this.</li>
-</ul>
 <p>Current KiCad bom</p>
 <table>
 <thead>
