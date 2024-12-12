@@ -12,13 +12,11 @@
         <meta name="author" content="Zeul">
       
       
-        <link rel="canonical" href="https://zeuldocs.com/blog/2024/12/09/december-9th/">
+        <link rel="canonical" href="https://zeuldocs.com/blog/2024/12/12/chip-selection/">
       
       
-        <link rel="prev" href="../../08/kicad-vs-altium-and-solidworks-vs-onshape/">
+        <link rel="prev" href="../../09/december-9th/">
       
-      
-        <link rel="next" href="../../12/chip-selection/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
@@ -29,7 +27,7 @@
     
     
       
-        <title>December 9th - zeuldocs</title>
+        <title>Chip Selection - zeuldocs</title>
       
     
     
@@ -82,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mcu" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              December 9th
+              Chip Selection
             
           </span>
         </div>
@@ -1106,6 +1109,125 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCU
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crystal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crystal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usb-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB-C
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-mux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power MUX
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imu" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pressure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0201-0402-or-0603" class="md-nav__link">
+    <span class="md-ellipsis">
+      0201, 0402 or 0603?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1160,7 +1282,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-12-09 00:00:00+00:00" class="md-ellipsis">December 9, 2024</time>
+                        <time datetime="2024-12-12 00:00:00+00:00" class="md-ellipsis">December 12, 2024</time>
                       </div>
                     </li>
                     
@@ -1182,7 +1304,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -1202,7 +1324,7 @@
         
 
   
-    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/blog/posts/2024/december/9.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/blog/posts/2024/december/chipselection.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1210,18 +1332,38 @@
   
 
 
-  <h1>December 9th</h1>
+  <h1>Chip Selection</h1>
 
-<p>Things I bought today:</p>
-<ul>
-<li>Test PCBs from JLC, module and backplate for the dingboard</li>
-<li>12 18650s</li>
-<li>spot welder and threaded heat inserts</li>
-<li>PCIe and UCB-C receptacles</li>
-</ul>
+<p>Here is the post outlining the reasons for picking the chips on dingboard.This post will be updated in the future with reasons why or why not to pick these chips. Requirement for all chips was being available on JLC. </p>
+<h3 id="mcu">MCU</h3>
+<p><a href="https://www.raspberrypi.com/products/rp2040/">RP 2040</a></p>
+<p>I went with the RP2040 because the alternatives are usually more complex or more expensive. The documentation on the rp2040 is great and there's a great online community around it. It's more than fast enough to accomplish what we need to do. </p>
+<p>ESP chips get kind of expensive, although they have some kind of CAN and ethernet capability on board. When we do go ethernet it'll probably be an addition to the CAN bus though.</p>
+<h4 id="flash">Flash</h4>
+<p><a href="https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/?__locale=en&amp;partNo=W25Q128JV">W25Q128JVP</a> Didn't even read the data sheet. It's the one they use in the rp2040 hardware design guide, it's the most flash the rp2040 can use.</p>
+<h4 id="crystal">Crystal</h4>
+<p><a href="https://www.digikey.ca/en/products/detail/abracon-llc/ABM8-272-T3/22472366">ABM8-272-T3</a> In the rp2040 design guide. </p>
+<h3 id="usb-c">USB-C</h3>
+<p><a href="https://jlcpcb.com/partdetail/Korean_HropartsElec-TYPE_C_31_M04/C129018">USB-C port</a> Easy choice; pretty much only one on JLCPCB at the time</p>
+<h3 id="regulator">Regulator</h3>
+<p><a href="https://jlcpcb.com/partdetail/TexasInstruments-LMR51430YFDDCR/C5219261">LMR51430YFDDCR</a> Constant, 1kHz switching reg, wide voltage input range, goes to 3.3v, cheap</p>
+<h3 id="power-mux">Power MUX</h3>
+<p><a href="https://jlcpcb.com/partdetail/TexasInstruments-TPS2121RUXR/C485916">TPS2121RUXR</a> Two inputs, one output cheap, on JLC. done.
+Using this in Highest Voltage Operation (VCOMP) mode with the battery as the main and USB as secondary  </p>
+<h3 id="sensors">Sensors</h3>
+<h4 id="imu">IMU</h4>
+<p>Need IMU with accelerometer, gyroscope and magnetometer, high sample rate, some vibration resistance, onboard sensor fusion and on JLC.</p>
+<p><a href="https://www.bosch-sensortec.com/products/smart-sensor-systems/bno055/">BNO055</a> This chip is very simple and meets all the requirements, it has a slightly on the low end sample rate of 100Hz but thats all right. I considered a bunch of other chips, but this one has the extra advantage of simplicity. You can't run your own code on it but that's fine. $14 though rip.</p>
+<h4 id="pressure">Pressure</h4>
+<p>Need temperature and pressure and high sample rate.</p>
+<p><a href="https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp388/">BMP388</a> Cheaper than the BMP390, slightly less accurate though. 200hz sample rate. </p>
+<h3 id="0201-0402-or-0603">0201, 0402 or 0603?</h3>
 <p>Should I use 0603, 0402 or 0201?
-If I go with 0603 we can solder it pretty easily. 0201 its not happening, and 0402 it's harder. Those components aren't even the expensive ones to have JLCPCB assemble for you. Actually 0201 is more expensive I think. Okay 0402 it is then. </p>
-<p>For the next board, we'll have a way to upload new code over the air. The CAN network will have its bootselect pins on the PCIe bus, the raspberry pi 5 or something will be able to put any of them into mass storage mode, and upload new code on the USB lines... maybe I should just do this now. okay fine i'll do it now</p>
+If I go with 0603 we can solder it pretty easily. 0201 its not happening, and 0402 is harder. Those components aren't even the expensive ones to have JLCPCB assemble for you. Actually 0201 is more expensive I think. Okay 0402 it is then. </p>
+<h3 id="conclusion">Conclusion</h3>
+<p>It's not a good idea to spend too long on chip selection, better to just start making shit and find out along the way. I'll probably regret some of these choices, but that is part of learning.
+Some chips I really didn't think that much about, if it does the job and is cheap enough I'll use it I don't need to compare it with every single alternative out there. Some chips like the sensors I compared a bunch of chips in the same range, and took inspiration from other teams and such. ChatGPT is great for suggesting chips, it currently gets the numbers wrong very often so you can't trust anything and have to read the data sheet yourself to confirm but it still makes it much much easier.
+Vibration wasn't too much a concern, most chips can withstand the vibration we'd put them through.</p>
 
 
 
@@ -1244,7 +1386,7 @@ If I go with 0603 we can solder it pretty easily. 0201 its not happening, and 04
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 10, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 12, 2024</span>
   </span>
 
     
@@ -1254,7 +1396,7 @@ If I go with 0603 we can solder it pretty easily. 0201 its not happening, and 04
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 9, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 12, 2024</span>
   </span>
 
     
