@@ -1157,7 +1157,7 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="chip-selection"><a class="toclink" href="2024/12/12/chip-selection/">Chip Selection</a></h2>
-<p>Here is the post outlining the reasons for picking the chips on dingboard.This post will be updated in the future with reasons why or why not to pick these chips. Requirement for all chips was being available on JLC. </p>
+<p>Here is the post outlining the reasons for picking the chips. This post will be updated in the future with reasons why or why not to pick these chips. Requirement for all chips was being available on JLC. </p>
 <h4 id="mcu"><a class="toclink" href="2024/12/12/chip-selection/#mcu">MCU</a></h4>
 <p><a href="https://www.raspberrypi.com/products/rp2040/">RP 2040</a></p>
 <p>I went with the RP2040 because the alternatives are usually more complex or more expensive. The documentation on the rp2040 is great and there's a great online community around it. It's more than fast enough to accomplish what we need to do. </p>
@@ -1168,8 +1168,11 @@
 <p><a href="https://www.digikey.ca/en/products/detail/abracon-llc/ABM8-272-T3/22472366">ABM8-272-T3</a> In the rp2040 design guide. </p>
 <h4 id="usb-c"><a class="toclink" href="2024/12/12/chip-selection/#usb-c">USB-C</a></h4>
 <p><a href="https://jlcpcb.com/partdetail/Korean_HropartsElec-TYPE_C_31_M04/C129018">USB-C port</a> Easy choice; pretty much only one on JLCPCB at the time</p>
-<h4 id="regulator"><a class="toclink" href="2024/12/12/chip-selection/#regulator">Regulator</a></h4>
+<h4 id="power"><a class="toclink" href="2024/12/12/chip-selection/#power">Power</a></h4>
+<h5 id="33v-regulator"><a class="toclink" href="2024/12/12/chip-selection/#33v-regulator">3.3v Regulator</a></h5>
 <p><a href="https://jlcpcb.com/partdetail/TexasInstruments-LMR51430YFDDCR/C5219261">LMR51430YFDDCR</a> Constant, 1kHz switching reg, wide voltage input range, goes to 3.3v, cheap</p>
+<h5 id="5v-buck-boost"><a class="toclink" href="2024/12/12/chip-selection/#5v-buck-boost">5v buck-boost</a></h5>
+<p><a href="https://www.ti.com/lit/ds/symlink/tps63070.pdf?ts=1734177677058">TPS630701</a></p>
 <h4 id="power-mux"><a class="toclink" href="2024/12/12/chip-selection/#power-mux">Power MUX</a></h4>
 <p><a href="https://jlcpcb.com/partdetail/TexasInstruments-TPS2121RUXR/C485916">TPS2121RUXR</a> Two inputs, one output cheap, on JLC. done.
 Using this in Highest Voltage Operation (VCOMP) mode with the battery as the main and USB as secondary  </p>
