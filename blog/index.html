@@ -1176,7 +1176,8 @@ Using this in Highest Voltage Operation (VCOMP) mode with the battery as the mai
 <h4 id="sensors"><a class="toclink" href="2024/12/12/chip-selection/#sensors">Sensors</a></h4>
 <h5 id="imu"><a class="toclink" href="2024/12/12/chip-selection/#imu">IMU</a></h5>
 <p>Need IMU with accelerometer, gyroscope and magnetometer, high sample rate, some vibration resistance, onboard sensor fusion and on JLC.</p>
-<p><a href="https://www.bosch-sensortec.com/products/smart-sensor-systems/bno055/">BNO055</a> This chip is very simple and meets all the requirements, it has a slightly on the low end sample rate of 100Hz but thats all right. I considered a bunch of other chips, but this one has the extra advantage of simplicity. You can't run your own code on it but that's fine. $14 though rip.</p>
+<p><a href="https://www.bosch-sensortec.com/products/smart-sensor-systems/bno055/">BNO055</a> This chip is very simple and meets all the requirements, it has a slightly on the low end sample rate of 100Hz but thats all right. It also only does +-16 Gs. I considered a bunch of other chips, but this one has the extra advantage of simplicity. You can't run your own code on it but that's fine. </p>
+<p>So it's not available for economic assembly with JLC. It's also like 20$ on digikey. It's also hard to solder. Two options: use another chip or get a adafruit breakout board so we can reuse the chip. Note to self: make sure the chips are available with economic assembly</p>
 <h5 id="pressure"><a class="toclink" href="2024/12/12/chip-selection/#pressure">Pressure</a></h5>
 <p>Need temperature and pressure and high sample rate.</p>
 <p><a href="https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp388/">BMP388</a> Cheaper than the BMP390, slightly less accurate though. 200hz sample rate. </p>
@@ -1185,6 +1186,7 @@ Using this in Highest Voltage Operation (VCOMP) mode with the battery as the mai
 <h4 id="0201-0402-or-0603"><a class="toclink" href="2024/12/12/chip-selection/#0201-0402-or-0603">0201, 0402 or 0603?</a></h4>
 <p>Should I use 0603, 0402 or 0201?
 If I go with 0603 we can solder it pretty easily. 0201 its not happening, and 0402 is harder. Those components aren't even the expensive ones to have JLCPCB assemble for you. Actually 0201 is more expensive I think. Okay 0402 it is then. </p>
+<p>Okay there's not that many JLC basic resistors so I'll use 0603 and hand solder those ones.</p>
 <h4 id="conclusion"><a class="toclink" href="2024/12/12/chip-selection/#conclusion">Conclusion</a></h4>
 <p>It's not a good idea to spend too long on chip selection, better to just start making shit and find out along the way. I'll probably regret some of these choices, but that is part of learning.
 Some chips I really didn't think that much about, if it does the job and is cheap enough I'll use it I don't need to compare it with every single alternative out there. Some chips like the sensors I compared a bunch of chips in the same range, and took inspiration from other teams and such. ChatGPT is great for suggesting chips, it currently gets the numbers wrong very often so you can't trust anything and have to read the data sheet yourself to confirm but it still makes it much much easier.
