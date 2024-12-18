@@ -12,29 +12,31 @@
         <meta name="author" content="Zeul">
       
       
-        <link rel="canonical" href="https://zeuldocs.com/blog/2024/12/12/chip-selection/">
+        <link rel="canonical" href="https://zeuldocs.com/avionics/dfmguide/">
       
       
-        <link rel="prev" href="../../09/december-9th/">
+        <link rel="prev" href="../cots/">
       
       
+        <link rel="next" href="../misc-thoughts/">
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../../../img/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Chip Selection - zeuldocs</title>
+        <title>DFM Guide - zeuldocs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -81,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mcu" class="md-skip">
+        <a href="#dfm-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -97,9 +99,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="zeuldocs" class="md-header__button md-logo" aria-label="zeuldocs" data-md-component="logo">
+    <a href="../.." title="zeuldocs" class="md-header__button md-logo" aria-label="zeuldocs" data-md-component="logo">
       
-  <img src="../../../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chip Selection
+              DFM Guide
             
           </span>
         </div>
@@ -234,7 +236,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -249,11 +251,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../avionics/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -269,13 +273,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
           
   
     
@@ -305,9 +307,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -318,9 +318,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="zeuldocs" class="md-nav__button md-logo" aria-label="zeuldocs" data-md-component="logo">
+    <a href="../.." title="zeuldocs" class="md-nav__button md-logo" aria-label="zeuldocs" data-md-component="logo">
       
-  <img src="../../../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     zeuldocs
@@ -347,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -364,6 +364,8 @@
       
   
   
+    
+  
   
   
     
@@ -386,21 +388,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../avionics/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -411,13 +416,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Avionics
@@ -433,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/cots/" class="md-nav__link">
+      <a href="../cots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -451,10 +456,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../avionics/dfmguide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DFM Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -463,6 +488,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lcsc-part-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      LCSC Part Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jlcpcb-basic-vs-extended-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      JLCPCB Basic vs. Extended Parts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jlcpcb-economic-vs-standard-pcb-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      JLCPCB Economic vs. Standard PCB Assembly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passive-smd-component-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passive SMD Component Sizes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jlcpcb-generic-smd-components-wip" class="md-nav__link">
+    <span class="md-ellipsis">
+      JLCPCB Generic SMD Components (WIP)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jlcpcb-basic-part-0603-resistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      JLCPCB “Basic Part” 0603 Resistors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-your-bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatting your BOM
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -475,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/misc-thoughts/" class="md-nav__link">
+      <a href="../misc-thoughts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,17 +613,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -540,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/cad/cad/" class="md-nav__link">
+      <a href="../cad/cad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -586,17 +697,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -621,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/modules/backplate/" class="md-nav__link">
+      <a href="../modules/backplate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -642,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/modules/chute/" class="md-nav__link">
+      <a href="../modules/chute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -663,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/modules/gps/" class="md-nav__link">
+      <a href="../modules/gps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/modules/sensors/" class="md-nav__link">
+      <a href="../modules/sensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/modules/power/0_0_2/" class="md-nav__link">
+      <a href="../modules/power/0_0_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../avionics/modules/power/0_1_0/" class="md-nav__link">
+      <a href="../modules/power/0_1_0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -813,8 +927,6 @@
       
   
   
-    
-  
   
   
     
@@ -831,24 +943,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../" class="md-nav__link ">
+            <a href="../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -859,13 +968,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -890,20 +999,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -930,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -974,20 +1080,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1014,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/agenda/" class="md-nav__link">
+      <a href="../../blog/category/agenda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/info/" class="md-nav__link">
+      <a href="../../blog/category/info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/complaints/" class="md-nav__link">
+      <a href="../../blog/category/complaints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1083,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/dingboard/" class="md-nav__link">
+      <a href="../../blog/category/dingboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,8 +1223,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1131,6 +1232,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1139,144 +1242,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mcu" class="md-nav__link">
+  <a href="#lcsc-part-numbers" class="md-nav__link">
     <span class="md-ellipsis">
-      MCU
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MCU">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#flash" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flash
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crystal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crystal
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usb-c" class="md-nav__link">
-    <span class="md-ellipsis">
-      USB-C
+      LCSC Part Numbers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#power" class="md-nav__link">
+  <a href="#jlcpcb-basic-vs-extended-parts" class="md-nav__link">
     <span class="md-ellipsis">
-      Power
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Power">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#33v-regulator" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3v Regulator
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5v-buck-boost" class="md-nav__link">
-    <span class="md-ellipsis">
-      5v buck-boost
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#power-mux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power MUX
+      JLCPCB Basic vs. Extended Parts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sensors" class="md-nav__link">
+  <a href="#jlcpcb-economic-vs-standard-pcb-assembly" class="md-nav__link">
     <span class="md-ellipsis">
-      Sensors
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sensors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#imu" class="md-nav__link">
-    <span class="md-ellipsis">
-      IMU
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pressure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pressure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payload-module" class="md-nav__link">
-    <span class="md-ellipsis">
-      Payload Module
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#0201-0402-or-0603" class="md-nav__link">
-    <span class="md-ellipsis">
-      0201, 0402 or 0603?
+      JLCPCB Economic vs. Standard PCB Assembly
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#passive-smd-component-sizes" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Passive SMD Component Sizes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jlcpcb-generic-smd-components-wip" class="md-nav__link">
+    <span class="md-ellipsis">
+      JLCPCB Generic SMD Components (WIP)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jlcpcb-basic-part-0603-resistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      JLCPCB “Basic Part” 0603 Resistors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-your-bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatting your BOM
     </span>
   </a>
   
@@ -1291,96 +1313,13 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/55005377" alt="Zeul Mordasiewicz">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          <a href="https://github.com/zeulewan">Zeul Mordasiewicz</a>
-                        
-                      </strong>
-                      <br>
-                      zeul
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-12-12 00:00:00+00:00" class="md-ellipsis">December 12, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/dingboard/">dingboard</a></span>
-                        </div>
-                      </li>
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              3 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
+                  
 
   
-    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/blog/posts/2024/december/chipselection.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/zeulewan/zeuldocs/edit/main/docs/avionics/dfmguide.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1388,45 +1327,642 @@
   
 
 
-  <h1>Chip Selection</h1>
-
-<p>Here is the post outlining the reasons for picking the chips. This post will be updated in the future with reasons why or why not to pick these chips. Requirement for all chips was being available on JLC. </p>
-<h3 id="mcu">MCU</h3>
-<p><a href="https://www.raspberrypi.com/products/rp2040/">RP 2040</a></p>
-<p>I went with the RP2040 because the alternatives are usually more complex or more expensive. The documentation on the rp2040 is great and there's a great online community around it. It's more than fast enough to accomplish what we need to do. </p>
-<p>ESP chips get kind of expensive, although they have some kind of CAN and ethernet capability on board. When we do go ethernet it'll probably be an addition to the CAN bus though.</p>
-<h4 id="flash">Flash</h4>
-<p><a href="https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/?__locale=en&amp;partNo=W25Q128JV">W25Q128JVP</a> Didn't even read the data sheet. It's the one they use in the rp2040 hardware design guide, it's the most flash the rp2040 can use.</p>
-<h4 id="crystal">Crystal</h4>
-<p><a href="https://www.digikey.ca/en/products/detail/abracon-llc/ABM8-272-T3/22472366">ABM8-272-T3</a> In the rp2040 design guide. </p>
-<h3 id="usb-c">USB-C</h3>
-<p><a href="https://jlcpcb.com/partdetail/Korean_HropartsElec-TYPE_C_31_M04/C129018">USB-C port</a> Easy choice; pretty much only one on JLCPCB at the time</p>
-<h3 id="power">Power</h3>
-<h4 id="33v-regulator">3.3v Regulator</h4>
-<p><a href="https://jlcpcb.com/partdetail/TexasInstruments-LMR51430YFDDCR/C5219261">LMR51430YFDDCR</a> Constant, 1kHz switching reg, wide voltage input range, goes to 3.3v, cheap</p>
-<h4 id="5v-buck-boost">5v buck-boost</h4>
-<p><a href="https://www.ti.com/lit/ds/symlink/tps63070.pdf?ts=1734177677058">TPS630701</a></p>
-<h3 id="power-mux">Power MUX</h3>
-<p><a href="https://jlcpcb.com/partdetail/TexasInstruments-TPS2121RUXR/C485916">TPS2121RUXR</a> Two inputs, one output cheap, on JLC. done.
-Using this in Highest Voltage Operation (VCOMP) mode with the battery as the main and USB as secondary  </p>
-<h3 id="sensors">Sensors</h3>
-<h4 id="imu">IMU</h4>
-<p>Need IMU with accelerometer, gyroscope and magnetometer, high sample rate, some vibration resistance, onboard sensor fusion and on JLC.</p>
-<p><a href="https://www.bosch-sensortec.com/products/smart-sensor-systems/bno055/">BNO055</a> This chip is very simple and meets all the requirements, it has a slightly on the low end sample rate of 100Hz but thats all right. It also only does +-16 Gs. I considered a bunch of other chips, but this one has the extra advantage of simplicity. You can't run your own code on it but that's fine. </p>
-<p>So it's not available for economic assembly with JLC. It's also like 20$ on digikey. It's also hard to solder. Two options: use another chip or get a adafruit breakout board so we can reuse the chip. Note to self: make sure the chips are available with economic assembly</p>
-<h4 id="pressure">Pressure</h4>
-<p>Need temperature and pressure and high sample rate.</p>
-<p><a href="https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp388/">BMP388</a> Cheaper than the BMP390, slightly less accurate though. 200hz sample rate. </p>
-<h4 id="payload-module">Payload Module</h4>
-<p>We might add a payload module with a bunch of different sensors and the "experiment" will be to see the discrepancies in their readings.</p>
-<h3 id="0201-0402-or-0603">0201, 0402 or 0603?</h3>
-<p>Should I use 0603, 0402 or 0201?
-If I go with 0603 we can solder it pretty easily. 0201 its not happening, and 0402 is harder. Those components aren't even the expensive ones to have JLCPCB assemble for you. Actually 0201 is more expensive I think. Okay 0402 it is then. </p>
-<p>Okay there's not that many JLC basic resistors so I'll use 0603 and hand solder those ones.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>It's not a good idea to spend too long on chip selection, better to just start making shit and find out along the way. I'll probably regret some of these choices, but that is part of learning.
-Some chips I really didn't think that much about, if it does the job and is cheap enough I'll use it I don't need to compare it with every single alternative out there. Some chips like the sensors I compared a bunch of chips in the same range, and took inspiration from other teams and such. ChatGPT is great for suggesting chips, it currently gets the numbers wrong very often so you can't trust anything and have to read the data sheet yourself to confirm but it still makes it much much easier.
-Vibration wasn't too much a concern, most chips can withstand the vibration we'd put them through.</p>
+<h1 id="dfm-guide">DFM Guide</h1>
+<p><strong>Design for manufacturing guide. <br> "Forked" from <a href="https://qret.ca/">QRET</a>'s <a href="https://www.notion.so/Component-Repository-2023-2024-160ca211d23080cd8ba2ee3102036125">component repository</a>.</strong></p>
+<h2 id="lcsc-part-numbers">LCSC Part Numbers</h2>
+<p>JLCPCB is owned by LCSC, which is a large component distributor. An LCSC Part Number is a unique identifier for a given component. They will start with a “C” follow by several digits (e.g. C6186, C51230, etc.). We add these part numbers to our KiCAD schematics for parts we want assembled, and then can automatically generate a BOM (bill of material) that JLCPCB can accept. You can find these numbers on the JLCPCB page.</p>
+<p><img alt="Untitled" src="1.png" /></p>
+<h2 id="jlcpcb-basic-vs-extended-parts">JLCPCB Basic vs. Extended Parts</h2>
+<p>When searching for components through JLCPCB, they are labelled either “Basic” or “Extended”. Basic components are ones that are used very frequently, and are thus loaded into the pick-and-place machines already. Extended components are less commonly used, and thus require additional effort to load them into machines. This extra effort translates to an <strong>additional fixed cost of ~$4CAD</strong> (”Feeder Loading fee”) for every Extended part. See <a href="https://jlcpcb.com/help/article/98-PCB-Assembly-FAQs">this page</a> for more pricing details. We want to use Basic parts wherever possible. (Note: Even when currency is set to CAD, the prices on JLCPCB’s part inventory seem to be USD).</p>
+<p><img alt="Untitled" src="2.png" /></p>
+<h2 id="jlcpcb-economic-vs-standard-pcb-assembly">JLCPCB Economic vs. Standard PCB Assembly</h2>
+<p>When asking JLCPCB to solder components for us, they have two tiers; Economic and Standard. Economic comes with many benefits, largely the reduced price &amp; option for Basic parts being free. Standard PCBA gives more options, but is more expensive (~$25 extra) and requires a loading fee for ALL components, thus resulting in a much higher price. More advanced features, such as very small components or gold-plated edge connectors, require Standard PCBA. See <a href="https://jlcpcb.com/capabilities/pcb-assembly-capabilities">this page for more info about JLCPCB’s Manufacturing and Assembly Capabilities</a>. We want to use the Economic option whenever possible. If “Economic” is selected, any “Standard Only” components will be highlighted after uploading the BOM during the order process. You can also use JLCPCB’s “<a href="https://jlcpcb.com/parts/bom-tool/">BOM Tool</a>” to evaluate current part selection.</p>
+<p><img alt="Untitled" src="3.png" /></p>
+<p><img alt="Untitled" src="4.png" /></p>
+<h2 id="passive-smd-component-sizes">Passive SMD Component Sizes</h2>
+<p><em>Note: SMD is a form of SMT</em>.</p>
+<p>We very commonly use the <strong>Imperial</strong> naming scheme when referring to passive SMD sizes.</p>
+<p>We will be trying to avoid 0402 components where possible, to make assembly &amp; repairs easier. 0603 and 0804 are our go-to sizes. Ideally we want to select components that JLCPCB stocks and avoid extended parts where possible.</p>
+<p><img alt="Untitled" src="5.png" /></p>
+<p><img alt="Untitled" src="6.png" /></p>
+<h2 id="jlcpcb-generic-smd-components-wip">JLCPCB Generic SMD Components (WIP)</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Footprint</strong></th>
+<th><strong>Link</strong></th>
+<th><strong>LCSC #</strong></th>
+<th><strong>JLC Basic?</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red LED</td>
+<td>LED</td>
+<td>0603</td>
+<td><a href="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603R/C2286">Link</a></td>
+<td>C2286</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>Red LED</td>
+<td>LED</td>
+<td>0805</td>
+<td><a href="https://jlcpcb.com/partdetail/85425-NCD0805R1/C84256">Link</a></td>
+<td>C84256</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>White LED</td>
+<td>LED</td>
+<td>0603</td>
+<td><a href="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0603W/C2290">Link</a></td>
+<td>C2290</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>White LED</td>
+<td>LED</td>
+<td>0805</td>
+<td><a href="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0805W/C34499">Link</a></td>
+<td>C34499</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>Yellow LED</td>
+<td>LED</td>
+<td>0603</td>
+<td><a href="https://jlcpcb.com/partdetail/73147-19_213_Y2C_CQ2R2L_3T_CY/C72038">Link</a></td>
+<td>C72038</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>Yellow LED</td>
+<td>LED</td>
+<td>0805</td>
+<td><a href="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0805Y/C2296">Link</a></td>
+<td>C2296</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>Green LED</td>
+<td>LED</td>
+<td>0805</td>
+<td><a href="https://jlcpcb.com/partdetail/Hubei_KentoElec-KT0805G/C2297">Link</a></td>
+<td>C2297</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2N7002</td>
+<td>N-MOSFET</td>
+<td>SOT-23</td>
+<td><a href="https://jlcpcb.com/partdetail/9040-2N7002/C8545">Link</a></td>
+<td>C8545</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>AO3400A</td>
+<td>N-MOSFET</td>
+<td>SOT-23-3L</td>
+<td><a href="https://jlcpcb.com/partdetail/Alpha_OmegaSemicon-AO3400A/C20917">Link</a></td>
+<td>C20917</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>AO3401A</td>
+<td>P-MOSFET</td>
+<td>SOT-23</td>
+<td><a href="https://jlcpcb.com/partdetail/Alpha_OmegaSemicon-AO3401A/C15127">Link</a></td>
+<td>C15127</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>SI2301CDS</td>
+<td>P-MOSFET</td>
+<td>SOT-23</td>
+<td><a href="https://jlcpcb.com/partdetail/VishayIntertech-SI2301CDS_T1GE3/C10487">Link</a></td>
+<td>C10487</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>1N5819WS</td>
+<td>Schottky Diode</td>
+<td>SOD-323</td>
+<td><a href="https://jlcpcb.com/partdetail/GuangdongHottech-1N5819WS/C191023">Link</a></td>
+<td>C191023</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>SS14</td>
+<td>Schottky Diode</td>
+<td>DO-214AC</td>
+<td><a href="https://jlcpcb.com/partdetail/Mdd-SS14/C2480">Link</a></td>
+<td>C2480</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1k</td>
+<td>Resistor</td>
+<td><strong>0805</strong></td>
+<td><a href="https://jlcpcb.com/partdetail/18201-0805W8F1001T5E/C17513">Link</a></td>
+<td>C17513</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10pF</td>
+<td>MLC Capacitor</td>
+<td>0603</td>
+<td></td>
+<td>C1634</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>10pF</td>
+<td>MLC Capacitor</td>
+<td>0402</td>
+<td></td>
+<td>C32949</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>30pF</td>
+<td>MLC Capacitor</td>
+<td>0603</td>
+<td></td>
+<td>C1658</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>2.2nF</td>
+<td>Capacitor</td>
+<td>0603</td>
+<td></td>
+<td>C1604</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>10nF</td>
+<td>MLC Capacitor</td>
+<td>0603</td>
+<td></td>
+<td>C57112</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>10nF</td>
+<td>MLC Capacitor</td>
+<td>0402</td>
+<td></td>
+<td>C15195</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>100nF</td>
+<td>MLC Capacitor</td>
+<td>0603</td>
+<td></td>
+<td>C14663</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>100nF</td>
+<td>MLC Capacitor</td>
+<td>0402</td>
+<td></td>
+<td>C1525</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>1uF</td>
+<td>MLC Capacitor</td>
+<td>0805</td>
+<td></td>
+<td>C28323</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>1uF</td>
+<td>MLC Capacitor</td>
+<td>0603</td>
+<td></td>
+<td>C15849</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>1uF</td>
+<td>MLC Capacitor</td>
+<td>0402</td>
+<td></td>
+<td>C52923</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>4.7uF</td>
+<td>MLC Capacitor</td>
+<td>0805</td>
+<td></td>
+<td>C1779</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>10uF</td>
+<td>MLC Capacitor</td>
+<td>0603</td>
+<td></td>
+<td>C96446</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>10uF</td>
+<td>MLC Capacitor</td>
+<td>0402</td>
+<td></td>
+<td>C15525</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>22uF</td>
+<td>MLC Capacitor</td>
+<td>0805</td>
+<td></td>
+<td>C45783</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>100Ohm</td>
+<td>Ferrite Bead</td>
+<td>0805</td>
+<td></td>
+<td>C1015</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>600Ohm</td>
+<td>Ferrite Bead</td>
+<td>0805</td>
+<td></td>
+<td>C1017</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="jlcpcb-basic-part-0603-resistors">JLCPCB “Basic Part” 0603 Resistors</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>LCSC Part Number</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0R</td>
+<td>C21189</td>
+</tr>
+<tr>
+<td>10R</td>
+<td>C22859</td>
+</tr>
+<tr>
+<td>20R</td>
+<td>C22950</td>
+</tr>
+<tr>
+<td>33R</td>
+<td>C23140</td>
+</tr>
+<tr>
+<td>51R</td>
+<td>C23197</td>
+</tr>
+<tr>
+<td>100R</td>
+<td>C22775</td>
+</tr>
+<tr>
+<td>120R</td>
+<td>C22787</td>
+</tr>
+<tr>
+<td>150R</td>
+<td>C22808</td>
+</tr>
+<tr>
+<td>200R</td>
+<td>C8218</td>
+</tr>
+<tr>
+<td>220R</td>
+<td>C22962</td>
+</tr>
+<tr>
+<td>270R</td>
+<td>C22966</td>
+</tr>
+<tr>
+<td>300R</td>
+<td>C23025</td>
+</tr>
+<tr>
+<td>330R</td>
+<td>C23138</td>
+</tr>
+<tr>
+<td>390R</td>
+<td>C23151</td>
+</tr>
+<tr>
+<td>470R</td>
+<td>C23179</td>
+</tr>
+<tr>
+<td>510R</td>
+<td>C23193</td>
+</tr>
+<tr>
+<td>560R</td>
+<td>C23204</td>
+</tr>
+<tr>
+<td>680R</td>
+<td>C23228</td>
+</tr>
+<tr>
+<td>820R</td>
+<td>C23253</td>
+</tr>
+<tr>
+<td>1k</td>
+<td>C21190</td>
+</tr>
+<tr>
+<td>1.2k</td>
+<td>C22765</td>
+</tr>
+<tr>
+<td>1.5k</td>
+<td>C22843</td>
+</tr>
+<tr>
+<td>1.8k</td>
+<td>C4177</td>
+</tr>
+<tr>
+<td>2k</td>
+<td>C22975</td>
+</tr>
+<tr>
+<td>2.2k</td>
+<td>C4190</td>
+</tr>
+<tr>
+<td>2.4k</td>
+<td>C22940</td>
+</tr>
+<tr>
+<td>2.7k</td>
+<td>C13167</td>
+</tr>
+<tr>
+<td>3.3k</td>
+<td>C22978</td>
+</tr>
+<tr>
+<td>3.6k</td>
+<td>C22980</td>
+</tr>
+<tr>
+<td>3.9k</td>
+<td>C23018</td>
+</tr>
+<tr>
+<td>4.7k</td>
+<td>C23162</td>
+</tr>
+<tr>
+<td>5.1k</td>
+<td>C23186</td>
+</tr>
+<tr>
+<td>5.6k</td>
+<td>C23189</td>
+</tr>
+<tr>
+<td>6.2k</td>
+<td>C4260</td>
+</tr>
+<tr>
+<td>6.8k</td>
+<td>C23212</td>
+</tr>
+<tr>
+<td>7.5k</td>
+<td>C23234</td>
+</tr>
+<tr>
+<td>8.2k</td>
+<td>C25981</td>
+</tr>
+<tr>
+<td>9.1k</td>
+<td>C23260</td>
+</tr>
+<tr>
+<td>10k</td>
+<td>C25804</td>
+</tr>
+<tr>
+<td>12k</td>
+<td>C22790</td>
+</tr>
+<tr>
+<td>13k</td>
+<td>C22797</td>
+</tr>
+<tr>
+<td>15k</td>
+<td>C22809</td>
+</tr>
+<tr>
+<td>18k</td>
+<td>C25810</td>
+</tr>
+<tr>
+<td>20k</td>
+<td>C4184</td>
+</tr>
+<tr>
+<td>22k</td>
+<td>C31850</td>
+</tr>
+<tr>
+<td>24k</td>
+<td>C23352</td>
+</tr>
+<tr>
+<td>27k</td>
+<td>C22967</td>
+</tr>
+<tr>
+<td>30k</td>
+<td>C22984</td>
+</tr>
+<tr>
+<td>33k</td>
+<td>C4216</td>
+</tr>
+<tr>
+<td>39k</td>
+<td>C23153</td>
+</tr>
+<tr>
+<td>47k</td>
+<td>C25819</td>
+</tr>
+<tr>
+<td>51k</td>
+<td>C23196</td>
+</tr>
+<tr>
+<td>56k</td>
+<td>C23206</td>
+</tr>
+<tr>
+<td>68k</td>
+<td>C23231</td>
+</tr>
+<tr>
+<td>75k</td>
+<td>C23242</td>
+</tr>
+<tr>
+<td>82k</td>
+<td>C23254</td>
+</tr>
+<tr>
+<td>100k</td>
+<td>C25803</td>
+</tr>
+<tr>
+<td>120k</td>
+<td>C25808</td>
+</tr>
+<tr>
+<td>150k</td>
+<td>C22807</td>
+</tr>
+<tr>
+<td>200k</td>
+<td>C25811</td>
+</tr>
+<tr>
+<td>220k</td>
+<td>C22961</td>
+</tr>
+<tr>
+<td>300k</td>
+<td>C23024</td>
+</tr>
+<tr>
+<td>330k</td>
+<td>C23137</td>
+</tr>
+<tr>
+<td>470k</td>
+<td>C23178</td>
+</tr>
+<tr>
+<td>510k</td>
+<td>C23192</td>
+</tr>
+</tbody>
+</table>
+<h2 id="formatting-your-bom">Formatting your BOM</h2>
+<p>The following is a good BOM:</p>
+<p><img alt="alt text" src="bom.png" /></p>
+<p>The most important thing in your BOM is the LCSC part number:</p>
+<p><img alt="alt text" src="8.png" /></p>
+<p>When you upload your BOM to JLCPCB it looks for the LCSC part number and matches the component automatically.</p>
+<p>You do not need silk screen chip designators for JLCPCB assembly. You do however need to put dots on pin one of ICs, and note anything that is polarized including LEDs. Try the JLCPCB assembly <a href="https://cart.jlcpcb.com/quote?fromDemo=yes">demo</a>.</p>
 
 
 
@@ -1449,7 +1985,7 @@ Vibration wasn't too much a concern, most chips can withstand the vibration we'd
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 18, 2024</span>
   </span>
 
     
@@ -1459,7 +1995,7 @@ Vibration wasn't too much a concern, most chips can withstand the vibration we'd
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 18, 2024</span>
   </span>
 
     
@@ -1469,68 +2005,12 @@ Vibration wasn't too much a concern, most chips can withstand the vibration we'd
 
 
 
-  
 
 
-
-  <h2 id="__comments">Comments</h2>
-
-  <script src="https://giscus.app/client.js"
-  data-repo="zeulewan/zeuldocs"
-  data-repo-id="R_kgDONP-Uxg"
-  data-category="comments"
-  data-category-id="DIC_kwDONP-Uxs4CkT6i"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="preferred_color_scheme"
-  data-lang="en"
-  crossorigin="anonymous"
-  async>
-</script>
-
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1604,10 +2084,10 @@ Vibration wasn't too much a concern, most chips can withstand the vibration we'd
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.action.edit", "content.code.copy", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share", "navigation.top", "toc.follow", "navigation.sections"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.code.copy", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share", "navigation.top", "toc.follow", "navigation.sections"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
