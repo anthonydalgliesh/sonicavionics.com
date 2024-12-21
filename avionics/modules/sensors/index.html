@@ -752,6 +752,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notes-about-chips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes about chips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes about chips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#33v-buck" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3v buck
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usb-impedance-matching" class="md-nav__link">
     <span class="md-ellipsis">
       USB Impedance matching:
@@ -1208,6 +1232,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#notes-about-chips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes about chips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes about chips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#33v-buck" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3v buck
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usb-impedance-matching" class="md-nav__link">
     <span class="md-ellipsis">
       USB Impedance matching:
@@ -1295,6 +1343,36 @@
 </ul>
 </li>
 </ul>
+<h2 id="notes-about-chips">Notes about chips</h2>
+<h3 id="33v-buck">3.3v buck</h3>
+<p>For the 3.3v buck it called for a 22.1kΩ resistor for R_FBB. 
+<img alt="alt text" src="1.png" />
+<em>22kΩ</em> is a standard resistor. So changing that to 22 will change the output voltage a tad.</p>
+<p>For the resistor divider:</p>
+<p>Starting from:</p>
+<div class="arithmatex">\[
+V_{\text{FB}} = V_{\text{OUT}} \left( 1 - \frac{R_{\text{FBT}}}{R_{\text{FBB}} + R_{\text{FBT}}} \right)
+\]</div>
+<p>Solving for V_OUT:</p>
+<div class="arithmatex">\[
+V_{\text{OUT}} = V_{\text{FB}} \cdot \frac{R_{\text{FBB}} + R_{\text{FBT}}}{R_{\text{FBB}}}.
+\]</div>
+<p>Subbing in the values:</p>
+<div class="arithmatex">\[
+V_{\text{FB}} = 0.6, \quad R_{\text{FBT}} = 100K, \quad R_{\text{FBB}} = 22K
+\]</div>
+<div class="arithmatex">\[
+V_{\text{OUT}} = 3.327273
+\]</div>
+<p>The voltage ranges for all the chips are as follows</p>
+<ul>
+<li>RP2040: -0.5 to 3.63</li>
+<li>Flash: 2.7 to 3.6</li>
+<li>CAN controller: 2.6 to 5.5</li>
+<li>IMU: -0.3 to 3.6</li>
+<li>Altimeter: -0.3 to 3.8</li>
+</ul>
+<p>Running the system at 3.33 volts will be fine, and it will save a lot of money or time.</p>
 <h2 id="usb-impedance-matching">USB Impedance matching:</h2>
 <p>From the RP2040 hardware design guide
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Even though RP2040 is limited to full speed data rate (12Mbps), we should try and makes sure that the characteristic
@@ -1312,8 +1390,7 @@
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>likely to work in many applications, but it’s probably not going to be compliant to the USB standard.
 </span></code></pre></div></p>
 <p>Since we're using a 4 layer board, I'll use the <a href="https://jlcpcb.com/pcb-impedance-calculator">JLC impedance calculator</a> to get the 90Ω</p>
-<p>Current KiCad bom</p>
-<p>https://github.com/zeulewan/dingboard/blob/main/dingboard_kicad/sensors/bom.csv</p>
+<p><a href="https://github.com/zeulewan/dingboard/blob/main/dingboard_kicad/sensors/bom.csv">Current KiCad bom</a></p>
 <table>
 <thead>
 <tr>
@@ -1474,7 +1551,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 17, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2024</span>
   </span>
 
     
