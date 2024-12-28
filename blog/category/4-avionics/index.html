@@ -1362,11 +1362,26 @@ Using this in Highest Voltage Operation (VCOMP) mode with the battery as the mai
 <h4 id="sensors"><a class="toclink" href="../../2024/12/12/chip-selection/#sensors">Sensors</a></h4>
 <h5 id="imu"><a class="toclink" href="../../2024/12/12/chip-selection/#imu">IMU</a></h5>
 <p>Need IMU with accelerometer, gyroscope and magnetometer, high sample rate, some vibration resistance, onboard sensor fusion and on JLC.</p>
-<p><a href="https://www.bosch-sensortec.com/products/smart-sensor-systems/bno055/">BNO055</a> This chip is very simple and meets all the requirements, it has a slightly on the low end sample rate of 100Hz but thats all right. It also only does +-16 Gs. I considered a bunch of other chips, but this one has the extra advantage of simplicity. You can't run your own code on it but that's fine. </p>
-<p>So it's not available for economic assembly with JLC. It's also like 20$ on digikey. It's also hard to solder. Two options: use another chip or get a adafruit breakout board so we can reuse the chip. Note to self: make sure the chips are available with economic assembly</p>
+<p>BNO055, BNO055, BMX055, MPU-9250 are off the table because they need standard assembly. The options are:
+- MPU-6050 (only 6-axis)
+- ICM-20948 (9-axis with fusion)</p>
+<p>So there's only the ICM-20948 if I wan't to do 9 axis.</p>
 <h5 id="pressure"><a class="toclink" href="../../2024/12/12/chip-selection/#pressure">Pressure</a></h5>
 <p>Need temperature and pressure and high sample rate.</p>
-<p><a href="https://www.bosch-sensortec.com/products/environmental-sensors/pressure-sensors/bmp388/">BMP388</a> Cheaper than the BMP390, slightly less accurate though. 200hz sample rate. </p>
+<p>Some JLC options for pressure sensors:
+- MS563702BA03-50
+- GZP6816D
+- GZP131-701A
+- MS560702BA03-50
+- HP203B
+- C2886574
+- C2914328
+- C3037991
+- C19100541
+- C242002
+- C5441134
+- C3253775</p>
+<p>MS560702BA03-50 was chosen for high speed capabilities.</p>
 <h5 id="payload-module"><a class="toclink" href="../../2024/12/12/chip-selection/#payload-module">Payload Module</a></h5>
 <p>We might add a payload module with a bunch of different sensors and the "experiment" will be to see the discrepancies in their readings.</p>
 <h4 id="0201-0402-or-0603"><a class="toclink" href="../../2024/12/12/chip-selection/#0201-0402-or-0603">0201, 0402 or 0603?</a></h4>
