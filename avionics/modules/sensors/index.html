@@ -717,34 +717,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chips" class="md-nav__link">
+  <a href="#main-chips" class="md-nav__link">
     <span class="md-ellipsis">
-      Chips
+      Main chips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes-about-chips" class="md-nav__link">
+  <a href="#assembly" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes about chips
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Notes about chips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#33v-buck" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3v buck
+      Assembly
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#point-of-load-vs-bus-regulation" class="md-nav__link">
     <span class="md-ellipsis">
       Point of Load vs Bus Regulation
@@ -752,16 +742,20 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#impedance-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impedance matching
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usb-impedance-matching" class="md-nav__link">
+  <a href="#bom" class="md-nav__link">
     <span class="md-ellipsis">
-      USB Impedance matching:
+      BOM
     </span>
   </a>
   
@@ -1292,34 +1286,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chips" class="md-nav__link">
+  <a href="#main-chips" class="md-nav__link">
     <span class="md-ellipsis">
-      Chips
+      Main chips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes-about-chips" class="md-nav__link">
+  <a href="#assembly" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes about chips
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Notes about chips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#33v-buck" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3v buck
+      Assembly
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#point-of-load-vs-bus-regulation" class="md-nav__link">
     <span class="md-ellipsis">
       Point of Load vs Bus Regulation
@@ -1327,16 +1311,20 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#impedance-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impedance matching
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usb-impedance-matching" class="md-nav__link">
+  <a href="#bom" class="md-nav__link">
     <span class="md-ellipsis">
-      USB Impedance matching:
+      BOM
     </span>
   </a>
   
@@ -1368,7 +1356,7 @@
 <h1 id="sensors">Sensors</h1>
 <p><img alt="alt text" src="sensors.png" /></p>
 <p><img alt="alt text" src="sch.png" /></p>
-<h2 id="chips">Chips</h2>
+<h2 id="main-chips">Main chips</h2>
 <ul>
 <li>
 <p>MCU</p>
@@ -1408,60 +1396,18 @@
 </ul>
 </li>
 </ul>
-<h2 id="notes-about-chips">Notes about chips</h2>
-<h3 id="33v-buck">3.3v buck</h3>
-<p>For the 3.3v buck it called for a 22.1kΩ resistor for R_FBB. 
-<img alt="alt text" src="1.png" />
-<em>22kΩ</em> is a standard resistor. So changing that to 22 will change the output voltage a tad.</p>
-<p>For the resistor divider:</p>
-<p>Starting from:</p>
-<div class="arithmatex">\[
-V_{\text{FB}} = V_{\text{OUT}} \left( 1 - \frac{R_{\text{FBT}}}{R_{\text{FBB}} + R_{\text{FBT}}} \right)
-\]</div>
-<p>Solving for V_OUT:</p>
-<div class="arithmatex">\[
-V_{\text{OUT}} = V_{\text{FB}} \cdot \frac{R_{\text{FBB}} + R_{\text{FBT}}}{R_{\text{FBB}}}.
-\]</div>
-<p>Subbing in the values:</p>
-<div class="arithmatex">\[
-V_{\text{FB}} = 0.6, \quad R_{\text{FBT}} = 100K, \quad R_{\text{FBB}} = 22K
-\]</div>
-<div class="arithmatex">\[
-V_{\text{OUT}} = 3.327273
-\]</div>
-<p>The voltage ranges for all the chips are as follows</p>
-<ul>
-<li>RP2040: -0.5 to 3.63</li>
-<li>Flash: 2.7 to 3.6</li>
-<li>CAN controller: 2.6 to 5.5</li>
-<li>IMU: -0.3 to 3.6</li>
-<li>Altimeter: -0.3 to 3.8</li>
-</ul>
-<p>Running the system at 3.33 volts will be fine, and it will save a lot of money or time.</p>
-<h3 id="point-of-load-vs-bus-regulation">Point of Load vs Bus Regulation</h3>
+<h2 id="assembly">Assembly</h2>
+<p>Standard assembly will be used over economic assembly. The primary reason is that the BNO055 and BMP388 aren't available with economic assembly. The number of extended parts on the board is exactly half of all unique components on the board, therefore the loading fee is equal either way. </p>
+<h2 id="point-of-load-vs-bus-regulation">Point of Load vs Bus Regulation</h2>
 <p>Point of load regulation is where your power bus is lets say 7.4 volts, and all your chips are 5v so you regulate the voltage near each chip. Bus regulation would be having the bus 5v. </p>
-<p>Point of load means multiple regulators at each load, but inherently less stable. 
-If you can get away without having to do point of load regulation you could save a lot of money though.</p>
-<p>To reduce costs, both the 5v and the 3.3v regulators will be deleted from the modules, in favour of regulated bus power. Before the power module is ready however, we will need a very basic 2 slot PCIe connector that can supply 5v to the board.</p>
-<p>I'll save around $375 buy not doing point of load. Delete the two regs and mux, that gets rid of 5 extended JLCPCB parts. It costs $3 per extended part. The minimum order number is 5 (actually 2 but I'd wanna do 5). There will be 5 modules. 5 * 3 * 5 * 5 = 375.</p>
-<h2 id="usb-impedance-matching">USB Impedance matching:</h2>
-<p>From the RP2040 hardware design guide
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Even though RP2040 is limited to full speed data rate (12Mbps), we should try and makes sure that the characteristic
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>impedance of the transmission lines (the copper tracks connecting the chip to the connector) are close to the USB
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>specification of 90Ω (measured differentially). On a 1mm thick board such as this, if we use 0.8mm wide tracks on
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>USB_DP and USB_DM, with a gap of 0.15mm between them, we should get a differential characteristic impedance of
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>around 90Ω. This is to ensure that the signals can travel along these transmission lines as cleanly as possible,
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>minimising voltage reflections which can reduce the integrity of the signal. In order for these transmission lines to work
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>properly, we need to make sure that directly below these lines is a ground. A solid, uninterrupted area of ground copper,
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>stretching the entire length of the track. On this design, almost the entirety of the bottom copper layer is devoted to
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>ground, and particular care was taken to ensure that the USB tracks pass over nothing but ground. If a PCB thicker than
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>1mm is chosen for your build, then we have two options. We could re-engineer the USB transmission lines to
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>compensate for the greater distance between the track and ground underneath (which could be a physical
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>impossibility), or we could ignore it, and hope for the best. USB FS can be quite forgiving, but your mileage may vary. It is
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>likely to work in many applications, but it’s probably not going to be compliant to the USB standard.
-</span></code></pre></div></p>
-<p>Since we're using a 4 layer board, I'll use the <a href="https://jlcpcb.com/pcb-impedance-calculator">JLC impedance calculator</a> to get the 90Ω</p>
-<p><a href="https://github.com/sonicavionics/4in/blob/main/dingboard_kicad/sensors/bom.csv">Current KiCad bom</a></p>
+<p>Point of load means having regulators on each module, but inherently less stability. 
+If you can get away without having to do point of load regulation you could save a lot of money though. </p>
+<p>To reduce costs, both the 5v and the 3.3v regulators will be deleted from the modules, in favour of regulated bus power. Before the full power module is ready however, we will need a very power module that supplies 5v and 3.3v.</p>
+<p>$375 can be saved buy not doing point of load. Delete the two regs and mux, that gets rid of 5 extended JLCPCB parts. It costs $3 per extended part (actually it's about 2.21). The minimum order number is 5. There will be 5 modules. 5 * 3 * 5 * 5 = 375.</p>
+<h2 id="impedance-matching">Impedance matching</h2>
+<p><a href="https://www.digikey.ca/en/maker/projects/how-to-route-differential-pairs-in-kicad-for-usb/45b99011f5d34879ae1831dce1f13e93">This guide</a> was used to do the impedance matching. The KiCad calculator and the <a href="https://jlcpcb.com/capabilities/pcb-capabilities">JLCPCB design rules</a> were used. </p>
+<h2 id="bom">BOM</h2>
+<p><a href="https://github.com/sonicavionics/4in/blob/main/kicad/modules/sensors/bom.csv">Current KiCad bom</a></p>
 <table>
 <thead>
 <tr>
@@ -1622,7 +1568,7 @@ If you can get away without having to do point of load regulation you could save
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 2, 2025</span>
   </span>
 
     
