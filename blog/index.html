@@ -1169,6 +1169,58 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2025-01-13 00:00:00+00:00">January 13, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/4-avionics/" class="md-meta__link">4" Avionics</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="sensors-powersim-and-backplate-arrive"><a class="toclink" href="2025/01/13/sensors-powersim-and-backplate-arrive/">Sensors, PowerSim and Backplate Arrive</a></h2>
+<p>It only took 7 days for the boards to arrive this time!</p>
+<p><img alt="alt text" src="2025/january/12/IMG_0950.JPG" /></p>
+<h3 id="lessons"><a class="toclink" href="2025/01/13/sensors-powersim-and-backplate-arrive/#lessons">Lessons</a></h3>
+<h4 id="sensor-module"><a class="toclink" href="2025/01/13/sensors-powersim-and-backplate-arrive/#sensor-module">Sensor Module</a></h4>
+<p>For a reason I still don't quite understand, the only cables that have been working for the data transmission are USB-C to USB-A. The USB-C to UCB-C cables don't. I though it had something to do with USB 2 vs 3 but I've tried a both 2 and 3 and they work.</p>
+<h4 id="powersim"><a class="toclink" href="2025/01/13/sensors-powersim-and-backplate-arrive/#powersim">PowerSim</a></h4>
+<p>Only some power supplies work. Macbook port doesn't unless there's I use an adapter thing, and my 40W Anker wall adapter doesn't either, Alienware ports do work. The reason for this is due to protection circuits present on some power supplies. </p>
+<p>The idea is they don't want a live wire lying around because it acts like an inductor and could potentially have high transient current. So if you have a very very small load, it will just shut off the power to the port to prevent that. </p>
+<h4 id="backplate"><a class="toclink" href="2025/01/13/sensors-powersim-and-backplate-arrive/#backplate">Backplate</a></h4>
+<p>I used 0805 resistors. I could have made them even bigger. Soldering all the PCIe pins is more annoying than it looks. I wish JLC assembled that.</p>
+<h3 id="next-steps"><a class="toclink" href="2025/01/13/sensors-powersim-and-backplate-arrive/#next-steps">Next Steps</a></h3>
+<p>I'll be testing out CAN bus soon. I have 4 sensor boards to test with. (I broke one during testing) If all goes well I'll start work on the power module.</p>
+<p>The CAD and 3D printing for the enclosure needs to be finalized as well.</p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/55005377" alt="Zeul Mordasiewicz">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2025-01-07 00:00:00+00:00">January 7, 2025</time></li>
         
           <li class="md-meta__item">
@@ -1643,50 +1695,6 @@ If I go with 0603 we can solder it pretty easily. 0201 its not happening, and 04
 <p>This is a fun avionics layout. I think it's kinda fun how they all slot into a PCIe CAN bus. 3D printing this is gonna be weird. I could also go with this design, but I think the first one is more fun.</p>
 <p><img alt="alt text" src="2024/december/7/3.png" width="300" /></p>
 <p>The thing about this avionics system, is that once the board dimensions are made, there's no going back. </p>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/55005377" alt="Zeul Mordasiewicz">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-12-04 00:00:00+00:00">December 4, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/4-avionics/" class="md-meta__link">4" Avionics</a>, 
-              <a href="category/complaints/" class="md-meta__link">complaints</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="solidworks-is-fucked"><a class="toclink" href="2024/12/04/solidworks-is-fucked/">Solidworks is fucked</a></h2>
-<p>Why is Solidworks so fucked. It keeps flickering between these views:</p>
-<p><img alt="alt text" src="2024/december/solidworks_complaints/1.png" /></p>
-<p><img alt="alt text" src="2024/december/solidworks_complaints/2.png" /></p>
-<p>I've had so many glitches. I've ran the import diagnostics on the PCIe step it says its fine. I did... do <a href="https://www.youtube.com/watch?app=desktop&amp;v=vmbjWkmItBQ">the workaround</a> to get my 3070ti working. Although this happens with realview on or off. </p>
     
   </div>
 </article>
